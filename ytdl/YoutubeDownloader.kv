@@ -1,0 +1,61 @@
+BoxLO:
+# python: kv
+	
+
+<BoxLO>
+	title: title
+	url: url
+	download: download
+	dlInput: dlInput
+	check: check
+
+	orientation: "vertical"
+	padding: 20
+	margin: None
+
+	TextInput:
+		id: dlInput
+		text: ""
+		multiline: "False"
+		padding: 10
+		size_hint: 1, None
+		height: "40dp"
+	BoxLayout:
+		Button:
+			id: download
+			text: "Download"
+			size_hint: 1, None
+			height: "40dp"
+			pos_hint: {"top": .95}
+			background_color: (1, 1, .5, 1)
+			on_press: root.downloadd()
+		Button:
+			id: check
+			text: "Check"
+			size_hint: 1, None
+			height: "40dp"
+			pos_hint: {"top": .95}
+			background_color: (1, 1, .5, 1)
+			on_press: root.checkk()
+	BoxLayout:
+		BoxLayout:
+			orientation: "vertical"
+			Label:
+				text: "Title: "
+				size_hint: .6, None
+				pos_hint: {"y": .95}
+			Label:
+				text: "Video Thumbnail: "
+				size_hint: .6, None
+				pos_hint: {"y": .75}
+		BoxLayout:
+			orientation: "vertical"
+			Label:
+				id: title
+				text: "Nothing"
+				size_hint: 1, None
+			Label:
+				id: url
+				text: "Nothing"
+				size_hint: 1, None
+
